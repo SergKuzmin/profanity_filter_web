@@ -18,18 +18,19 @@ Then install Python requirements
     pip3 install -r requirements.txt
 
 ## Run backend
-### For unix system 
+For unix system 
         
         cd path/to/project
         run.sh 
 
-###For windows 
-####run backend
+For windows 
+
+run backend
     
         cd path/to/project
         ./python backend.py
 
-####run frontend
+run frontend
         
         cd path/to/project/ui
         ng serve

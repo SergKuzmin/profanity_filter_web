@@ -32,6 +32,7 @@ class Filter:
     def add_bad_words(self, list_of_words: typing.List[str]):
         self.worst_words_ever += list_of_words
         self.worst_words_ever.sort(key=lambda x: len(x), reverse=True)
+        self.pattern = re.compile('|'.join(map(re.escape, self.worst_words_ever)))
 
     def _replace_worst_word(self, sre_match) -> str:
         bad_word_in_theory = sre_match.group(0)
